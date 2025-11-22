@@ -1,0 +1,140 @@
+/* --- RESET E BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #e8f1e6; /* verde claro natureza */
+    color: #2c3a2c; /* verde escuro natural */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- CONTAINER --- */
+.container {
+    width: 75%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+
+    /* Sombra suave como luz através de árvores */
+    box-shadow: 0px 8px 25px rgba(0, 50, 20, 0.15);
+
+    /* Borda estilo papel natural */
+    border: 3px solid #3d5d3f;
+}
+
+/* --- HEADER --- */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid #4f6f52; /* verde folha mais forte */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #335b40; /* verde elegante */
+}
+
+.header p {
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+/* ICONES SOCIAIS */
+.header a img {
+    width: 28px;   /* tamanho maior */
+    height: 28px;
+    margin: 0 6px;
+    transition: transform .25s ease;
+    filter: brightness(0.9);
+}
+
+.header a img:hover {
+    transform: scale(1.12);
+    filter: brightness(1);
+}
+
+.header a img:hover {
+    transform: scale(1.15);
+    filter: brightness(1);
+}
+
+/* --- TÍTULOS DAS SEÇÕES --- */
+h2 {
+    font-size: 21px;
+    margin: 30px 0 12px;
+    color: #284d33; /* verde musgo */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 8px;
+}
+
+h2::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(#4f6f52, #3a5f3a);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- TEXTOS --- */
+p, li {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: #2d3c2e;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+/* --- BOTÃO --- */
+.button {
+    text-align: center;
+    margin-top: 35px;
+}
+
+button {
+    padding: 12px 32px;
+    background: #4f6f52; /* verde folha */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 500;
+
+    box-shadow: 0px 4px 10px rgba(0, 50, 20, 0.25);
+}
+
+button:hover {
+    background: #3d5d3f; /* verde musgo */
+    transform: translateY(-3px);
+}

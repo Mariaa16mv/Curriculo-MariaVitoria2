@@ -1,4 +1,139 @@
-/* ===================== IMPRESSÃO A4 FINAL ===================== */
+/* ===================== RESET E BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #e8f1e6; /* verde claro natureza */
+    color: #2c3a2c;      /* verde escuro natural */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+    width: 75%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+
+    /* Sombra suave */
+    box-shadow: 0px 8px 25px rgba(0, 50, 20, 0.15);
+
+    /* Borda natural */
+    border: 3px solid #3d5d3f;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4f6f52;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #335b40;
+}
+
+.header p {
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+/* Ícones de Redes Sociais */
+.header a img {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
+    transition: transform .25s ease;
+    filter: brightness(0.9);
+}
+
+.header a img:hover {
+    transform: scale(1.15);
+    filter: brightness(1);
+}
+
+/* ===================== TÍTULOS DAS SEÇÕES ===================== */
+h2 {
+    font-size: 21px;
+    margin: 30px 0 12px;
+    color: #284d33;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 8px;
+}
+
+h2::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(#4f6f52, #3a5f3a);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ===================== TEXTOS ===================== */
+p, li {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: #2d3c2e;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+/* ===================== BOTÃO ===================== */
+.button {
+    text-align: center;
+    margin-top: 35px;
+}
+
+button {
+    padding: 12px 32px;
+    background: #4f6f52;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0, 50, 20, 0.25);
+}
+
+button:hover {
+    background: #3d5d3f;
+    transform: translateY(-3px);
+}
+
+/* ============================================================
+   ===================== IMPRESSÃO A4 ==========================
+   ============================================================ */
 @media print {
 
     @page {
@@ -7,24 +142,21 @@
     }
 
     body {
-        padding: 0 !important;
         background: white !important;
+        padding: 0 !important;
+        display: block !important;
     }
 
     .container {
         width: 100% !important;
-        padding: 15px !important;
+        padding: 18px !important;
         margin: 0 !important;
-
-        /* borda suave */
-        border: 2px solid #6c8f72 !important;
-
-        /* sombra removida */
-        box-shadow: none !important;
         border-radius: 10px !important;
+        border: 2px solid #6c8f72 !important;
+        box-shadow: none !important;
     }
 
-    /* ------ HEADER ------ */
+    /* HEADER */
     .header {
         margin-bottom: 15px !important;
     }
@@ -33,27 +165,23 @@
         width: 110px !important;
         height: 110px !important;
         border-width: 3px !important;
-        margin-bottom: 6px !important;
     }
 
     .header h1 {
         font-size: 20px !important;
         margin-top: 8px !important;
-        font-weight: 600 !important;
     }
 
     .header p {
         font-size: 12px !important;
-        margin-top: 2px !important;
     }
 
-    /* ícones */
     .header a img {
         width: 18px !important;
         height: 18px !important;
     }
 
-    /* ------ TÍTULOS ------ */
+    /* TÍTULOS */
     h2 {
         font-size: 15px !important;
         margin: 15px 0 5px !important;
@@ -64,23 +192,28 @@
         width: 3px !important;
     }
 
-    /* ------ TEXTOS ------ */
+    /* TEXTOS */
     p, li {
         font-size: 12px !important;
         line-height: 1.25 !important;
-    }
-
-    ul {
-        margin-left: 14px !important;
     }
 
     li {
         margin-bottom: 3px !important;
     }
 
-    /* Remove botão */
+    ul {
+        margin-left: 14px !important;
+    }
+
+    /* Remove botão da impressão */
     .button, button {
         display: none !important;
     }
-}
 
+    /* Remove sombras */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}

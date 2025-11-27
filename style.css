@@ -1,72 +1,86 @@
-/* ================= IMPRESSÃO A4 ================= */
+/* ===================== IMPRESSÃO A4 FINAL ===================== */
 @media print {
 
     @page {
         size: A4;
-        margin: 1.2cm;  /* margem padrão elegante */
+        margin: 0.7cm;
     }
 
     body {
-        background: white !important;   /* remove fundo verde */
         padding: 0 !important;
-        display: block !important;
+        background: white !important;
     }
 
     .container {
         width: 100% !important;
-        padding: 20px !important;
-        box-shadow: none !important;
-        border: none !important;
+        padding: 15px !important;
         margin: 0 !important;
+
+        /* borda suave */
+        border: 2px solid #6c8f72 !important;
+
+        /* sombra removida */
+        box-shadow: none !important;
+        border-radius: 10px !important;
     }
 
-    /* Foto menor para caber sem quebrar a página */
+    /* ------ HEADER ------ */
+    .header {
+        margin-bottom: 15px !important;
+    }
+
     .header img {
-        width: 130px !important;
-        height: 130px !important;
+        width: 110px !important;
+        height: 110px !important;
         border-width: 3px !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 6px !important;
     }
 
-    /* Títulos menores */
-    h1 {
-        font-size: 22px !important;
-        margin-top: 10px !important;
+    .header h1 {
+        font-size: 20px !important;
+        margin-top: 8px !important;
+        font-weight: 600 !important;
     }
 
+    .header p {
+        font-size: 12px !important;
+        margin-top: 2px !important;
+    }
+
+    /* ícones */
+    .header a img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* ------ TÍTULOS ------ */
     h2 {
-        font-size: 17px !important;
-        margin: 18px 0 8px !important;
-        padding-left: 6px !important;
+        font-size: 15px !important;
+        margin: 15px 0 5px !important;
+        padding-left: 5px !important;
     }
 
-    /* Barrinha lateral do título ajustada */
     h2::before {
-        width: 4px !important;
+        width: 3px !important;
     }
 
-    /* Textos menores */
+    /* ------ TEXTOS ------ */
     p, li {
-        font-size: 13px !important;
-        line-height: 1.35 !important;
-    }
-
-    li {
-        margin-bottom: 4px !important;
+        font-size: 12px !important;
+        line-height: 1.25 !important;
     }
 
     ul {
-        margin-left: 15px !important;
+        margin-left: 14px !important;
     }
 
-    /* Remove botão na impressão */
+    li {
+        margin-bottom: 3px !important;
+    }
+
+    /* Remove botão */
     .button, button {
         display: none !important;
     }
-
-    /* Remove qualquer sombra no modo impressão */
-    * {
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
 }
+
